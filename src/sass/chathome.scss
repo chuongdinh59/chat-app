@@ -1,0 +1,8 @@
+.chat {
+  height: 100vh;
+  width: 100vw;
+  background-color: $dark-color-bg;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  //   padding: 20px;
+}

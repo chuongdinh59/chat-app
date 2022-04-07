@@ -1,0 +1,76 @@
+.room-chat {
+  display: flex;
+  flex-direction: column;
+  &_main {
+    padding: 0 10px;
+    padding-bottom: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    input {
+      width: 100%;
+      background-color: transparent;
+      color: #e4e6eb;
+    }
+  }
+  &_send {
+    width: 100%;
+    position: relative;
+    background-color: #3e4042;
+    color: #e4e6eb;
+    display: flex;
+    gap: 0 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 8px 10px;
+  }
+  .emotion {
+    font-size: 25px;
+  }
+  &_message {
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #000;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #3e4042;
+    }
+    .message-item.active-message {
+      justify-content: flex-end;
+      span {
+        background-color: bisque;
+        color: #000;
+      }
+    }
+  }
+  .message-item {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    img {
+      width: 4%;
+      border-radius: 50%;
+      object-fit: center;
+      object-position: center;
+      overflow: hidden;
+      height: 45px;
+    }
+    span {
+      max-width: 80%;
+      padding: 10px 8px;
+      background-color: #3e4042;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    &.active-message {
+    }
+  }
+}
