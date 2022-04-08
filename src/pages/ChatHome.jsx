@@ -1,5 +1,6 @@
 import React from "react";
 import ChatRoom from "../components/ChatRoom";
+import CreateRoomModal from "../components/CreateRoomModal";
 import RoomList from "../components/RoomList";
 
 function ChatHome(props) {
@@ -7,6 +8,7 @@ function ChatHome(props) {
     <div className="chat">
       <RoomList />
       <ChatRoom />
+      <CreateRoomModal />
     </div>
   );
 }

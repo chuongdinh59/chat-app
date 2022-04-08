@@ -43,4 +43,13 @@
       background-color: rgba(45, 136, 255, 0.1);
     }
   }
+  &-btn_addRoom {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    svg {
+      fill: white;
+      font-size: 22px;
+    }
+  }
 }

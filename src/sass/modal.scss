@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  &.is-visible {
+    visibility: visible;
+  }
+  visibility: hidden;
+  &-main {
+    width: 45%;
+    height: 35%;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  &-overplay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  &-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 10000000;
+  }
+  &-createRoom {
+    padding: 20px;
+    &_btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0 10px;
+      .btn {
+        padding: 5px 10px;
+        font-size: 16px;
+        &-apply {
+          background-color: #1877f2;
+        }
+        &-cancel {
+          color: #000;
+        }
+      }
+    }
+    &_field {
+      display: flex;
+      span {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+        svg {
+          font-size: 16px;
+        }
+      }
+      input {
+        border-bottom: 1px solid #000;
+        width: 60%;
+      }
+    }
+  }
+}

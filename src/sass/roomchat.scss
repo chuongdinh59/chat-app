@@ -32,8 +32,10 @@
   &_message {
     display: flex;
     flex-direction: column;
+    // justify-content: center;
     height: 570px;
-    overflow: auto;
+    overflow-y: auto;
+    position: relative;
     &::-webkit-scrollbar {
       width: 5px;
     }
