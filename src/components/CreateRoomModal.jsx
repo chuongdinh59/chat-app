@@ -52,7 +52,12 @@ function CreateRoomModal(props) {
           <input type="text" />
         </div>
         <div className="modal-createRoom_btn mt-2 text">
-          <div className="btn-cancel btn pointer">Trở lại</div>
+          <div
+            className="btn-cancel btn pointer"
+            onClick={() => setIsOpen(false)}
+          >
+            Trở lại
+          </div>
           <div className="btn-apply btn pointer" onClick={createNewRoom}>
             Tạo Phòng
           </div>

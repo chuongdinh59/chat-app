@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { FaTimes } from "react-icons/fa";
-function Modal({ isOpen, handleClose, children }) {
+function Modal({ isOpen, handleClose, children, name }) {
   if (typeof document === undefined) {
     return <div className="modal"></div>;
   }
   return ReactDOM.createPortal(
     <div className={`modal ${isOpen ? "is-visible" : ""}`}>
       <div className="modal-overplay" onClick={handleClose}></div>
-      <div className="modal-main">
+      <div className={`modal-main ${name === "invite" ? "height-70" : ""}`}>
         <div className="modal-close" onClick={handleClose}>
           <FaTimes />
         </div>

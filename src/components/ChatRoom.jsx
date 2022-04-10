@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import HeaderChat from "./HeaderChat";
 import { RiEmotionHappyFill } from "react-icons/ri";
+import { RoomContext } from "../context/RoomProvider";
 function ChatRoom(props) {
+  // const { users } = useContext(RoomContext);
+  // console.log(users);
   return (
     <div className="room-chat">
       <HeaderChat />
@@ -22,13 +25,17 @@ function ChatRoom(props) {
               alt=""
             />
             <span className="text">
-              Chào mừng bạn đến với bình nguyên vô tận
+              Chào mừng bạn đến với bình nguyên vô tận Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Repellat, illo, nihil
+              voluptatem eaque eligendi placeat, ratione nulla minus maxime esse
+              laboriosam officia voluptates! Fugit expedita minima accusantium
+              eum nobis mollitia?
             </span>
           </div>
         </div>
 
         <div className="room-chat_send mt-2">
-          <input type="text" plac eholder="Nhập tin nhắn cần gửi" />
+          <input type="text" placeholder="Nhập tin nhắn cần gửi" />
           <RiEmotionHappyFill className="pointer emotion" />
         </div>
       </div>

@@ -20,7 +20,7 @@ function AuthProvider({ children }) {
         navigate("/");
         return;
       }
-      setUser({});
+      // setUser({});
     });
     return unsub;
   }, [navigate]);

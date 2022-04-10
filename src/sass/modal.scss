@@ -12,8 +12,7 @@
   &-main {
     width: 45%;
     height: 35%;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #242526;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -22,13 +21,21 @@
     z-index: 10;
     overflow: hidden;
   }
+  .height-70 {
+    height: 70%;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   &-overplay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 10;
   }
   &-content {
@@ -42,6 +49,9 @@
     top: 20px;
     cursor: pointer;
     z-index: 10000000;
+    svg {
+      fill: #fff;
+    }
   }
   &-createRoom {
     padding: 20px;
@@ -56,9 +66,6 @@
         &-apply {
           background-color: #1877f2;
         }
-        &-cancel {
-          color: #000;
-        }
       }
     }
     &_field {
@@ -68,13 +75,82 @@
         display: flex;
         align-items: center;
         gap: 0 5px;
+        color: #fff;
         svg {
           font-size: 16px;
         }
       }
       input {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #fff;
         width: 60%;
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+  &-invite {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .search {
+      padding: 10px 0;
+      width: 100%;
+      background-color: transparent;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .invite-member {
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 7px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      &.active {
+        background-color: #2374e1;
+        color: #fff;
+      }
+    }
+    input[type="checkbox"] {
+      width: 25px;
+      height: 25px;
+      border: none;
+      outline: none;
+    }
+    .output-se {
+      height: 120px;
+      color: rgba(255, 255, 255, 0.3);
+      position: relative;
+      font-size: 16px;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &_output {
+      flex: 1;
+      .item {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        color: #fff;
+        img {
+          height: 100%;
+          width: 7%;
+          border-radius: 50%;
+        }
+        &-profile {
+          display: flex;
+          align-items: center;
+          gap: 0 10px;
+        }
       }
     }
   }
