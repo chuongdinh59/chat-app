@@ -27,6 +27,15 @@ export default function RoomProvider({ children }) {
     };
   }, [selectedRoom.members]);
   const members = useFirestore("users", usersCondition);
+  const allUsersCondition = React.useMemo(() => {
+    return {
+      fieldName: "uid",
+      operator: "not-in",
+      compareValue: selectedRoom?.members,
+    };
+  }, [selectedRoom?.members]);
+  const allMembers = useFirestore("users", allUsersCondition);
+
   return (
     <RoomContext.Provider
       value={{
@@ -35,6 +44,7 @@ export default function RoomProvider({ children }) {
         setSelectedRoomId,
         members,
         selectedRoom,
+        allMembers,
       }}
     >
       {children}

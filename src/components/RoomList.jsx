@@ -6,6 +6,7 @@ import { RoomContext } from "../context/RoomProvider";
 function RoomList(props) {
   const { setIsOpen } = useContext(ModalContext);
   const { rooms, selectedRoomId, setSelectedRoomId } = useContext(RoomContext);
+
   return (
     <div className="room">
       <h4 className="room-header title mb-2">Chat</h4>
@@ -29,11 +30,7 @@ function RoomList(props) {
               }`}
               onClick={() => setSelectedRoomId(i?.id)}
             >
-              <img
-                src="https://symbols.vn/wp-content/uploads/2021/12/Cap-nhat-cho-ban-doc-hinh-Anime-cute-moi.jpg"
-                alt=""
-                className="room-item_avatar"
-              />
+              <img src={i?.photoURL} alt="" className="room-item_avatar" />
               <div className="room-item_content">
                 <h5 className="room-name title title-room">{i?.nameRoom}</h5>
                 <p className="text">

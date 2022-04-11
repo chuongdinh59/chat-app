@@ -125,11 +125,41 @@
       color: rgba(255, 255, 255, 0.3);
       position: relative;
       font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      width: 100%;
       span {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+      &_item {
+        position: relative;
+        width: 80px;
+        .close-icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        img {
+          width: 40px;
+          margin: 0 auto;
+          border-radius: 50%;
+        }
+        p {
+          font-size: 12px;
+          margin-top: 10px;
+          color: #fff;
+          text-align: center;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
       }
     }
     &_output {
@@ -143,8 +173,34 @@
         color: #fff;
         img {
           height: 100%;
-          width: 7%;
+          width: 40px;
           border-radius: 50%;
+        }
+        .container-check {
+          width: 25px;
+          height: 25px;
+          position: relative;
+          .check-mark {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #1877f2;
+            z-index: 100;
+          }
+          input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #fff;
+          }
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
         &-profile {
           display: flex;
