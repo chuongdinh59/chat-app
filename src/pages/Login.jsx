@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { auth } from "../firebase/config";
-import firebase from "../firebase/config";
+import React from "react";
+import firebase, { auth } from "../firebase/config";
 import addDocument from "../utils/addDocument";
-import { AuthContext } from "../context/AuthProvider";
+import { generateKeywords } from "../utils/generatedKey";
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
 function Login(props) {
   const handleFaceBookLogin = async () => {
@@ -16,6 +15,7 @@ function Login(props) {
         photoURL: user.photoURL,
         uid: user.uid,
         providerId: additionalUserInfo.providerId,
+        key: generateKeywords(user.displayName),
       });
     }
   };

@@ -87,6 +87,11 @@
         color: #fff;
       }
     }
+    .btn-invite {
+      background-color: #1877f2;
+      color: #fff;
+      padding: 5px 10px;
+    }
   }
   &-invite {
     padding: 20px;
@@ -135,6 +140,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
       &_item {
         position: relative;
         width: 80px;
@@ -160,6 +166,27 @@
           text-overflow: ellipsis;
           word-break: break-word;
         }
+      }
+    }
+    .list {
+      height: 240px;
+      overflow-y: scroll;
+      position: relative;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+      .unknow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.3);
       }
     }
     &_output {

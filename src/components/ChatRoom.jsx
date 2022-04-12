@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
-import HeaderChat from "./HeaderChat";
+import React from "react";
 import { RiEmotionHappyFill } from "react-icons/ri";
-import { RoomContext } from "../context/RoomProvider";
+import HeaderChat from "./HeaderChat";
 function ChatRoom(props) {
-  // const { users } = useContext(RoomContext);
-  // console.log(users);
   return (
     <div className="room-chat">
       <HeaderChat />

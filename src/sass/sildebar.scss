@@ -57,8 +57,12 @@
         object-fit: center;
       }
     }
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
     svg {
-      font-size: 18px;
+      transition: 0.3s;
+      font-size: 20px;
     }
   }
 }

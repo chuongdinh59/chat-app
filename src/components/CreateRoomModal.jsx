@@ -7,7 +7,7 @@ import { ModalContext } from "../context/ModalProvider";
 import addDocument from "../utils/addDocument";
 import { AuthContext } from "../context/AuthProvider";
 function CreateRoomModal(props) {
-  const { isOpen, setIsOpen } = useContext(ModalContext);
+  const { isOpen, setIsOpen, setIsOpenInvite } = useContext(ModalContext);
   const { user } = useContext(AuthContext);
   const [value, setValue] = useState("");
   const createNewRoom = () => {
@@ -37,19 +37,28 @@ function CreateRoomModal(props) {
             onChange={(e) => setValue(e.currentTarget.value)}
           />
         </div>
-        <div className="modal-createRoom_field mt-2">
-          <span>
-            <AiOutlinePlusCircle />
-            Thêm thành viên:
-          </span>
-          <input type="text" />
-        </div>
+
         <div className="modal-createRoom_field mt-2">
           <span>
             <HiPhotograph />
             Ảnh đại diện :
           </span>
           <input type="text" />
+        </div>
+        <div className="modal-createRoom_field mt-2">
+          <span>
+            <AiOutlinePlusCircle />
+            Thêm thành viên:
+          </span>
+          <div
+            className="btn-invite pointer"
+            onClick={() => {
+              setIsOpen(false);
+              setIsOpenInvite(true);
+            }}
+          >
+            Mời người dùng
+          </div>
         </div>
         <div className="modal-createRoom_btn mt-2 text">
           <div

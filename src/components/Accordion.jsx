@@ -10,7 +10,9 @@ function Accordion({ title, content }) {
     <div className="bar-main_item mb-2">
       <div className="control title pointer" onClick={() => setActive(!active)}>
         <span>{title}</span>
-        <MdOutlineKeyboardArrowDown />
+        <MdOutlineKeyboardArrowDown
+          className={`${active ? "rotate-180" : ""}`}
+        />
       </div>
       {active && (
         <div className="content mt-2">
