@@ -6,6 +6,7 @@ import { HiPhotograph } from "react-icons/hi";
 import { ModalContext } from "../context/ModalProvider";
 import addDocument from "../utils/addDocument";
 import { AuthContext } from "../context/AuthProvider";
+import { generateKeywords } from "../utils/generatedKey";
 function CreateRoomModal(props) {
   const { isOpen, setIsOpen, setIsOpenInvite } = useContext(ModalContext);
   const { user } = useContext(AuthContext);
@@ -15,6 +16,7 @@ function CreateRoomModal(props) {
       addDocument("rooms", {
         nameRoom: value,
         members: [user?.uid],
+        key: generateKeywords(value),
       });
     setIsOpen(false);
   };

@@ -8,7 +8,7 @@ function Modal({ isOpen, handleClose, children, name }) {
   return ReactDOM.createPortal(
     <div className={`modal ${isOpen ? "is-visible" : ""}`}>
       <div className="modal-overplay" onClick={handleClose}></div>
-      <div className={`modal-main ${name === "invite" ? "height-70" : ""}`}>
+      <div className={`modal-main ${name}`}>
         <div className="modal-close" onClick={handleClose}>
           <FaTimes />
         </div>

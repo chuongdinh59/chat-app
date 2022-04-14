@@ -15,20 +15,16 @@ function SideBarSetting(props) {
       content: [
         {
           icon: <HiOutlinePencil />,
-          cate: "Đổi tên đoạn chat ",
+          cate: "Đổi tên đoạn chat",
         },
         {
           icon: <MdInsertPhoto />,
-          cate: "Thay đổi ảnh ",
+          cate: "Thay đổi ảnh",
         },
-        {
-          icon: <BsCircle />,
-          cate: "Đổi chủ đề ",
-        },
-        {
-          icon: <BsCircle />,
-          cate: "Chỉnh sửa biệt danh ",
-        },
+        // {
+        //   icon: <BsCircle />,
+        //   cate: "Đổi chủ đề ",
+        // },
       ],
     },
     {

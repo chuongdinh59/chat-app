@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import ChangeNameRoomModal from "../components/ChangeNameRoomModal";
+import ChangePhotoRoomModal from "../components/ChangePhotoRoomModal";
 import ChatRoom from "../components/ChatRoom";
 import CreateRoomModal from "../components/CreateRoomModal";
 import InviteMemberModal from "../components/InviteMemberModal";
@@ -18,6 +20,8 @@ function ChatHome(props) {
       {isOpenSetting && <SideBarSetting />}
       <CreateRoomModal />
       <InviteMemberModal />
+      <ChangeNameRoomModal />
+      <ChangePhotoRoomModal />
     </div>
   );
 }

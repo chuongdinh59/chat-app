@@ -5,8 +5,11 @@ const useFirestore = (collection, condition) => {
   const [documents, setDocuments] = useState();
 
   useEffect(() => {
-    // orderBy("createAt");
     let collectionRef = db.collection(collection);
+
+    if (condition?.fieldName === "uid")
+      collectionRef = collectionRef.orderBy("uid");
+    else collectionRef = collectionRef.orderBy("createAt");
 
     if (condition) {
       if (!condition.compareValue || !condition.compareValue.length) {

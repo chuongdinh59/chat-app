@@ -4,8 +4,8 @@ import { GrAddCircle } from "react-icons/gr";
 import { ModalContext } from "../context/ModalProvider";
 function Accordion({ title, content }) {
   const [active, setActive] = useState(false);
-  const { setIsOpenInvite } = useContext(ModalContext);
-
+  const { setIsOpenInvite, setIsOpenChangeName, setIsOpenChangePhoto } =
+    useContext(ModalContext);
   return (
     <div className="bar-main_item mb-2">
       <div className="control title pointer" onClick={() => setActive(!active)}>
@@ -17,7 +17,17 @@ function Accordion({ title, content }) {
       {active && (
         <div className="content mt-2">
           {content.map((i, id) => (
-            <div className="item title pointer mb-2" key={id}>
+            <div
+              className="item title pointer mb-2"
+              key={id}
+              onClick={() => {
+                if (i.cate === "Đổi tên đoạn chat") {
+                  setIsOpenChangeName(true);
+                } else if (i.cate === "Thay đổi ảnh") {
+                  setIsOpenChangePhoto(true);
+                }
+              }}
+            >
               <div className="item-title">
                 {typeof i.icon === "string" ? (
                   <img src={i.icon} alt="" />
