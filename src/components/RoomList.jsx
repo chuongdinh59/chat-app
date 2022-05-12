@@ -60,6 +60,7 @@ function RoomList(props) {
         className="btn-logout pointer"
         onClick={() => {
           auth.signOut();
+          localStorage.clear();
           navigate("/login");
         }}
       >
